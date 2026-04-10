@@ -1,0 +1,4 @@
+@EndUserText.label: 'Service Def for EHS'
+define service ZUI_INCIDENT_EHS {
+  expose ZC_INCIDENT_EHS as Incident;
+}

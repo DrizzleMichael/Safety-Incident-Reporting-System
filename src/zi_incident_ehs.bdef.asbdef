@@ -1,0 +1,17 @@
+unmanaged implementation in class zbp_i_incident_ehs unique;
+strict ( 2 );
+
+define behavior for ZI_INCIDENT_EHS alias Incident
+lock master
+authorization master ( instance ) // <--- Uncommented to satisfy strict(2)
+{
+  create;
+  update;
+  delete;
+
+  // The magic fix: satisfies strict(2) AND forces Fiori to show the Create button
+  field ( readonly : update ) IncidentId;
+
+  field ( readonly ) IncidentNo, CreatedBy, CreatedAt;
+  field ( mandatory ) Category, Severity, Description;
+}

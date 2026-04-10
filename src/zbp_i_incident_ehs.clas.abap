@@ -1,0 +1,5 @@
+CLASS zbp_i_incident_ehs DEFINITION PUBLIC ABSTRACT FINAL FOR BEHAVIOR OF zi_incident_ehs.
+ENDCLASS.
+
+CLASS zbp_i_incident_ehs IMPLEMENTATION.
+ENDCLASS.
